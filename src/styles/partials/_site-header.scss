@@ -1,0 +1,18 @@
+// *
+// *  Site Header
+// *
+
+$module-name: 'site-header';
+
+.#{$module-name} {
+  background: #ccc;
+  padding: .5em 0;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: normal;
+  }
+
+}

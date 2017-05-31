@@ -1,1 +1,8 @@
+@import 'helpers/variables';
+@import 'helpers/mixins-and-extends';
+
 @import 'partials/default';
+@import 'partials/accessibility';
+@import 'partials/site-header';
+@import 'partials/site-navigation';
+@import 'partials/site-content';

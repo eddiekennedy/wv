@@ -1,0 +1,23 @@
+// *
+// *  Mixins and Extends
+// *
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Media Queries
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@mixin media-query($breakpoint) {
+
+  @if $breakpoint == mid {
+    @media (min-width: $mid-breakpoint) { @content; }
+  }
+  @else if $breakpoint == large {
+    @media (min-width: $large-breakpoint) { @content; }
+  }
+  @else if $breakpoint == small {
+    @media (min-width: $small-breakpoint) { @content; }
+  }
+  @else if round($breakpoint) == $breakpoint {
+    @media (min-width: #{$breakpoint}px) { @content; }
+  }
+
+}

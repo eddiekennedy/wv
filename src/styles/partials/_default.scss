@@ -1,11 +1,16 @@
+// *
+// *  Default Element Styles
+// *
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   font-family: helvetica, verdana, sans-serif;
 }
 
 a {
-  color: purple;
+  text-decoration: none;
 }

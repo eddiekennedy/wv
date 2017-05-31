@@ -1,0 +1,15 @@
+// *
+// *  Site Navigation
+// *
+
+$module-name: 'site-navigation';
+
+.#{$module-name} {}
+
+@include media-query(mid) {
+
+  .#{$module-name} {
+    display: none;
+  }
+
+}
