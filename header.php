@@ -16,5 +16,3 @@
 <body <?php body_class(); ?>>
 
 	<?php get_template_part( 'partials/site-header' ); ?>
-
-	<div id="content" class="site-content">

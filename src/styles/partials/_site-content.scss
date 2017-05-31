@@ -5,21 +5,9 @@
 $module-name: 'site-content';
 
 .#{$module-name} {
-  display: grid;
-  grid-template-columns: 16.6666666667% 66.6666666666% 16.6666666667%;
   //padding: 0 20px;
   margin: 0 auto;
   max-width: 968px;
-
-  .site-main {
-    //grid-column: 1;
-    grid-column: 1 / span 3;
-
-  }
-
-  figure {
-
-  }
 }
 
 @include media-query(small) {
@@ -28,4 +16,17 @@ $module-name: 'site-content';
     //padding: 0 3%;
   }
 
+}
+
+.entry-content {
+  display: grid;
+  grid-template-columns: 16.6666666667% 66.6666666666% 16.6666666667%;
+
+  > p {
+    grid-column: 2 / span 1;
+  }
+
+  .gallery {
+    grid-column: 1 / span 3;
+  }
 }
