@@ -1,8 +1,10 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 // sass task
-gulp.task('sass', function () {
+gulp.task('styles', function () {
   gulp.src('./src/styles/**/*.scss')
     .pipe(sass({
       //outputStyle: 'compressed'
@@ -10,10 +12,21 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./dist/css'));
 });
 
+// js task
+gulp.task('scripts', function (cb) {
+  pump([
+    gulp.src('src/scripts/*.js'),
+    uglify(),
+    gulp.dest('dist/js')
+  ],
+    cb
+  );
+});
+
 // watch task
 gulp.task('watch', function () {
-  gulp.watch(['./src/styles/**/*.scss'], ['sass']);
+  gulp.watch(['./src/styles/**/*.scss'], ['styles']);
 });
 
 // default task
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['styles', 'watch']);
