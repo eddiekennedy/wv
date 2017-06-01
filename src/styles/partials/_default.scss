@@ -8,7 +8,8 @@
 
 body {
   margin: 0;
-  font-family: helvetica, verdana, sans-serif;
+  font-family: $helvetica-stack;
+  color: $text-color;
 }
 
 a {
@@ -17,5 +18,12 @@ a {
 
 figure {
   margin: 0;
-  background: yellow;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $futura-stack;
 }

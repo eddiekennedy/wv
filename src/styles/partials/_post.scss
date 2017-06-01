@@ -5,5 +5,103 @@
 $module-name: 'post';
 
 .#{$module-name} {
+  display: grid;
+  grid-template-columns: 8.333333333333% 83.333333333333% 8.333333333333%;
+  margin-bottom: 2em;
+
+  &__header {
+    grid-column: 2 / span 1;
+  }
+
+  &__meta {
+    position: relative;
+    color: #666;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:after {
+      display: block;
+      content: ' ';
+      position: absolute;
+      top: 40%;
+      z-index: -100;
+      width: 100%;
+      border-top: 3px double #ccc;
+    }
+  }
+
+  &__time {
+    display: inline-block;
+    padding: 0 20px;
+    background: #fff;
+  }
+
+  &__title {
+    //margin-top: .5em;
+  }
+
+  &__title-link {
+    color: $text-color;
+  }
+
+  &__content {
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: 8.333333333333% 83.333333333333% 8.333333333333%;
+    font-family: $georgia-stack;
+
+    & > p {
+      grid-column: 2 / span 1;
+      margin-top: 0;
+      line-height: 1.5em;
+    }
+
+    & figure {
+      grid-column: 1 / span 3;
+      margin: auto;
+      text-align: center;
+
+      & img {
+        margin: auto;
+      }
+    }
+
+    & figcaption {
+      text-align: left;
+      font-style: italic;
+    }
+
+    & .gallery {
+      grid-column: 1 / span 3;
+    }
+
+  }
+
+  &__footer {
+    grid-column: 2 / span 1;
+  }
+
+
+}
+
+@include media-query(large) {
+
+  .#{$module-name} {
+    grid-template-columns: 16.6666666667% 66.6666666666% 16.6666666667%;
+
+    &__content {
+      grid-template-columns: 16.6666666667% 66.6666666666% 16.6666666667%;
+
+      & > p {
+        grid-column: 2 / span 1;
+        font-size: 1.2em;
+        line-height: 1.6em;
+      }
+
+    }
+
+
+  }
 
 }

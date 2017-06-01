@@ -7,12 +7,18 @@ $module-name: 'site-header';
 .#{$module-name} {
   background: #ccc;
   padding: .5em 0;
+  margin-bottom: 1em;
   text-align: center;
 
   &__title {
     margin: 0;
-    font-size: 1.8em;
+    font-family: $futura-stack;
+    font-size: 1.6em;
     font-weight: normal;
+
+    &-link {
+      color: #fff;
+    }
   }
 
 }

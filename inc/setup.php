@@ -51,6 +51,19 @@ function wv_setup() {
     'default-image' => '',
   ) ) );
 
+  // Remove emoji icons.
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+  // // Fix fixed width image issue
+  // function remove_width_attribute( $html ) {
+  //   print_r($html);
+  //   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+  //   return $html;
+  // }
+  // add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+  // add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
 }
 endif;
 add_action( 'after_setup_theme', 'wv_setup' );
