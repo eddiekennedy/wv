@@ -7,7 +7,7 @@ $module-name: 'post';
 .#{$module-name} {
   display: grid;
   grid-template-columns: 8.333333333333% 83.333333333333% 8.333333333333%;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 
   &__header {
     grid-column: 2 / span 1;
@@ -26,6 +26,8 @@ $module-name: 'post';
       position: absolute;
       top: 40%;
       z-index: -100;
+      // width: 50%;
+      // margin: 0 0 0 25%;
       width: 100%;
       border-top: 3px double #ccc;
     }
@@ -39,6 +41,12 @@ $module-name: 'post';
 
   &__title {
     //margin-top: .5em;
+    // &:before {
+    //   display: block;
+    //   content: '⟐';
+    //   float: left;
+    //   margin: .05em 0 0 -30px;
+    // }
   }
 
   &__title-link {
