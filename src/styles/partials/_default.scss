@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: $helvetica-stack;
+  font-family: $sans-serif-stack-2;
   color: $text-color;
 }
 
@@ -17,7 +17,7 @@ a {
 }
 
 figure {
-  margin: 0;
+  //margin: 0;
 }
 
 img {
@@ -25,5 +25,5 @@ img {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: $futura-stack;
+  font-family: $sans-serif-stack-1;
 }

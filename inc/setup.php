@@ -10,6 +10,11 @@ if ( ! function_exists( 'wv_setup' ) ) :
  */
 function wv_setup() {
 
+  /**
+   * Site Nav Walker
+   */
+  require get_template_directory() . '/inc/Site_Nav_Walker.php';
+
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
 

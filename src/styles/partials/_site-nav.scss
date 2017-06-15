@@ -1,0 +1,32 @@
+// *
+// *  Site Navigation
+// *
+
+$module-name: 'site-nav';
+
+.#{$module-name} {
+
+  padding: .4em 0;
+  background: #fff;
+  border-bottom: 1px dashed #ccc;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+}
+
+@include media-query(mid) {
+
+  .#{$module-name} {
+    //display: none;
+  }
+
+}
+
