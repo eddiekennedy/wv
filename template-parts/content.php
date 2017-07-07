@@ -12,12 +12,6 @@
 <article class="post">
 
 	<header class="post__header">
-		<?php
-		if ( 'post' === get_post_type() ) : ?>
-			<div class="post__meta">
-				<time class="post__time"><?php the_time('l ◦ F jS, Y'); ?></time>
-			</div>
-		<?php endif; ?>
 
 		<?php
 		if ( is_single() ) :
@@ -43,6 +37,12 @@
 	</div>
 
 	<footer class="post__footer">
+		<?php
+		if ( 'post' === get_post_type() ) : ?>
+			<div class="post__meta">
+				<time class="post__time">Posted on  <?php the_time('l ◦ F jS, Y'); ?></time>
+			</div>
+		<?php endif; ?>
 		<?php //wv_entry_footer(); ?>
 	</footer>
 
