@@ -69,13 +69,13 @@ class Site_Nav_Walker extends Walker_Nav_Menu {
     /*
      * Build $item_output
      */
-    $item_output = $args->before
+    $item_output = $args['before']
       . "<a $attributes>"
-      . $args->link_before
+      . $args['link_before']
       . $title
       . '</a> '
-      . $args->link_after
-      . $args->after;
+      . $args['link_after']
+      . $args['after'];
 
     /*
      * Finish building $output
