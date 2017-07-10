@@ -25,7 +25,11 @@ $module-name: 'post';
   //   border-top: 3px double #ccc;
   // }
 
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid $link-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
 
   &__header {
     grid-column: 2 / span 1;
