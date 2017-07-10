@@ -17,10 +17,16 @@ gulp.task('scripts', function (cb) {
   pump([
     gulp.src('src/scripts/*.js'),
     uglify(),
-    gulp.dest('dist/js')
+    gulp.dest('./dist/js')
   ],
     cb
   );
+});
+
+// copy images task
+gulp.task('copy-images', function() {
+  gulp.src('./src/images/*.{gif,jpg,png,svg}')
+    .pipe(gulp.dest('./dist/images'));
 });
 
 // watch task

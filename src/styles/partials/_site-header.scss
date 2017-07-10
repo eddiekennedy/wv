@@ -4,8 +4,20 @@
 
 $module-name: 'site-header';
 
+$image-1: '/content/themes/wv/dist/images/11337228_901773326543576_1515732175_n.jpg';
+$image-2: '/content/themes/wv/dist/images/11380000_1486055278356843_1612470731_n.jpg';
+$image-3: '/content/themes/wv/dist/images/11821709_700095910122347_1037753345_n.jpg';
+$image-4: '/content/themes/wv/dist/images/11849354_962066363849686_782082245_n.jpg';
+$image-5: '/content/themes/wv/dist/images/11849451_1084370354927963_1357129207_n.jpg';
+$image-6: '/content/themes/wv/dist/images/11850005_984864801576280_1404715567_n.jpg';
+
 .#{$module-name} {
-  background: #ccc;
+  //background: #ccc;
+  background-image: url($image-1);
+  background-repeat: no-repeat;
+  background-position: center 60%;
+  background-size: cover;
+  background-attachment: fixed;
   margin-bottom: 2em;
   text-align: center;
 
@@ -14,10 +26,11 @@ $module-name: 'site-header';
     padding: .5em 0;
     font-family: $sans-serif-stack-1;
     font-size: 1.1em;
-    font-weight: normal;
+    font-weight: bold;
     text-transform: uppercase;
+    text-shadow: 0 0 10px $link-color;
     letter-spacing: .2em;
-    color: #aaa;
+    color: #fff;
 
     &-link {
       color: #fff;
