@@ -7,7 +7,7 @@ var pump = require('pump');
 gulp.task('styles', function () {
   gulp.src('./src/styles/**/*.scss')
     .pipe(sass({
-      //outputStyle: 'compressed'
+      outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(gulp.dest('./dist/css'));
 });
