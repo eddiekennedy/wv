@@ -17,16 +17,16 @@
   <?php endif; ?>
 
   <?php
-    wp_nav_menu(
-      array (
-        'menu' => 'site-nav',
-        'container' => 'nav',
-        'container_class' => 'site-nav',
-        'menu_class' => 'site-nav__list',
-        'menu_id' => FALSE,
-        'depth' => 1,
-        'walker' => new Site_Nav_Walker
-      )
-    );
+    // wp_nav_menu(
+    //   array (
+    //     'menu' => 'site-nav',
+    //     'container' => 'nav',
+    //     'container_class' => 'site-nav',
+    //     'menu_class' => 'site-nav__list',
+    //     'menu_id' => FALSE,
+    //     'depth' => 1,
+    //     'walker' => new Site_Nav_Walker
+    //   )
+    // );
   ?>
 </header>

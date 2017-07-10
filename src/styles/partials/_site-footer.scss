@@ -5,7 +5,9 @@
 $module-name: 'site-footer';
 
 .#{$module-name} {
-  background: #ccc;
+  border-top: 1px dashed $link-color;
   padding: 1em 0;
+  color: $text-color--light;
   text-align: center;
 }
+
