@@ -29,10 +29,25 @@ gulp.task('copy-images', function() {
     .pipe(gulp.dest('./dist/images'));
 });
 
+// copy templates task
+gulp.task('copy-templates', function() {
+  gulp.src('./src/templates/**/*')
+    .pipe(gulp.dest('./dist'));
+});
+
 // watch task
 gulp.task('watch', function () {
   gulp.watch(['./src/styles/**/*.scss'], ['styles']);
+  gulp.watch(['./src/scripts/*.js'], ['scripts']);
+  gulp.watch(['./src/images/*.{gif,jpg,png,svg}'], ['copy-images']);
+  gulp.watch(['./src/templates/**/*'], ['copy-templates']);
 });
 
 // default task
-gulp.task('default', ['styles', 'watch']);
+gulp.task('default', [
+  'styles',
+  'scripts',
+  'copy-images',
+  'copy-templates',
+  'watch'
+]);
