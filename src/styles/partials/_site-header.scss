@@ -12,7 +12,6 @@ $image-5: '/wp-content/themes/wv/images/11849451_1084370354927963_1357129207_n.j
 $image-6: '/wp-content/themes/wv/images/11850005_984864801576280_1404715567_n.jpg';
 
 .#{$module-name} {
-  //background: #ccc;
   background-image: url($image-1);
   background-repeat: no-repeat;
   background-position: center 60%;
@@ -25,7 +24,7 @@ $image-6: '/wp-content/themes/wv/images/11850005_984864801576280_1404715567_n.jp
     margin: 0;
     padding: .5em 0;
     font-family: $sans-serif-stack-1;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 0 0 10px $link-color;
@@ -43,8 +42,17 @@ $image-6: '/wp-content/themes/wv/images/11850005_984864801576280_1404715567_n.jp
 
   .#{$module-name} {
     &__title {
+      font-size: 1.1em;
+    }
+  }
+
+}
+
+@include media-query(mid) {
+
+  .#{$module-name} {
+    &__title {
       font-size: 1.6em;
-      letter-spacing: .2em;
     }
   }
 
