@@ -25,15 +25,15 @@ $image-6: '/wp-content/themes/wv/images/11850005_984864801576280_1404715567_n.jp
   &:after {
     content: '';
     position: absolute;
-    top: 95%;
-    display: inline-block;
+    top: 90%;
+    display: block;
     width: 100%;
     border: 1px solid #fff;
   }
 
   &__title {
     margin: 0;
-    padding: 1em 0;
+    padding: 1em 0 1.2em;
     font-family: $sans-serif-stack-1;
     font-size: 1em;
     font-weight: bold;
@@ -54,7 +54,7 @@ $image-6: '/wp-content/themes/wv/images/11850005_984864801576280_1404715567_n.jp
   .#{$module-name} {
     &__title {
       font-size: 1.1em;
-      padding: .5em 0;
+      padding: .5em 0 0.7em;
     }
   }
 
