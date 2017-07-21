@@ -2,4 +2,4 @@
 *.sass-cache
 /dist
 /node_modules
-src/templates/partials/analytics.php
+/src/templates/partials/analytics.php
